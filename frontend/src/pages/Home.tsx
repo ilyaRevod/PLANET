@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 import projectImage from '../public/images/PLANETw.png';
+import imageee from '../public/images/image.png';
+import bezoodi from '../public/images/بزودی(1).jpg';
+import ilyaa from '../public/images/ilyaaaa.jpg';
 
 const Home = () => {
   return (
@@ -32,7 +35,7 @@ const Home = () => {
             <Link to="/schedule">
               <div className="relative overflow-hidden rounded-xl group h-[25vh]">
                 <img
-                  src="/src/public/images/image.png"
+                  src={imageee}
                   alt="About Me"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -48,7 +51,7 @@ const Home = () => {
             <Link to="#">
               <div className="relative overflow-hidden rounded-xl group h-[25vh]">
                 <img
-                  src="/src/public/images/بزودی(1).jpg"
+                  src={bezoodi}
                   alt="About Planet"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -67,7 +70,7 @@ const Home = () => {
           <Link to="/about-me" className="block h-full">
             <div className="relative overflow-hidden rounded-2xl group h-[calc(75vh+1.5rem)]">
               <img
-                src="/src/public/images/ilyaaaa.jpg"
+                src={ilyaa}
                 alt="About me"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
