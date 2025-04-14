@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import projectImage from '../public/images/PLANETw.png';
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
           <Link to="/about-project" className="block">
             <div className="relative overflow-hidden rounded-2xl group h-[50vh]">
               <img
-                src="/src/public/images/PLANETw.png"
+                src={projectImage}
                 alt="Project Banner"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
