@@ -12,7 +12,8 @@ const authLogin = require('./routes/API-auth-login');
 const getClasses = require('./routes/API-get-classes');
 
 const app = express();
-const port = 3000;
+// const port = 3000;
+const port = process.env.PORT || 3000;
 
 /*
 var accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs', 'access.log'), { flags: 'a' });
@@ -25,7 +26,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: 'https://planet-frontend-t4t1.onrender.com',
+  credentials: true
+}));
+
 
 app.get('/', function (req, res) {
   res.send("Hello! This is PLANET API's");
