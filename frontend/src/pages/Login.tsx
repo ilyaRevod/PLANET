@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE = import.meta.env.VITE_API_URL;
+// const API_BASE = import.meta.env.VITE_API_URL;
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ export const Login = () => {
     }
 
     try {
-      const loginResponse = await fetch(`${API_BASE}/api/auth/login`, {
+      const loginResponse = await fetch('https://planet-wt7r.onrender.com/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ export const Login = () => {
         return;
       }
 
-      const scheduleResponse = await fetch(`${API_BASE}/api/get-classes`, {
+      const scheduleResponse = await fetch('https://planet-wt7r.onrender.com/api/get-classes', {
         credentials: 'include'
       });
 
