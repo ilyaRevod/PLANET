@@ -39,7 +39,7 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background transition-colors duration-300">
         <Header
           isDarkMode={isDarkMode}
           toggleDarkMode={() => setIsDarkMode(!isDarkMode)}
