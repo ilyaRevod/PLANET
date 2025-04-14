@@ -14,8 +14,10 @@ const getClasses = require('./routes/API-get-classes');
 const app = express();
 const port = 3000;
 
+/*
 var accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs', 'access.log'), { flags: 'a' });
 app.use(morgan('combined', { stream: accessLogStream }));
+*/
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
