@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+const API_BASE = import.meta.env.VITE_API_URL;
+
 export const Login = () => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
@@ -24,8 +26,7 @@ export const Login = () => {
     }
 
     try {
-      // First, try to login
-      const loginResponse = await fetch('http://192.168.1.104:3000/api/auth/login', {
+      const loginResponse = await fetch(`${API_BASE}/api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,6 +36,7 @@ export const Login = () => {
           email: formData.email,
           password: formData.password,
         }),
+        credentials: 'include'
       });
 
       const loginData = await loginResponse.json();
@@ -45,23 +47,23 @@ export const Login = () => {
         return;
       }
 
-      // If login is successful, fetch the schedule
-      const scheduleResponse = await fetch('http://192.168.1.104:3000/api/get-classes');
+      const scheduleResponse = await fetch(`${API_BASE}/api/get-classes`, {
+        credentials: 'include'
+      });
+
+      const scheduleData = await scheduleResponse.json();
 
       if (!scheduleResponse.ok) {
-        const scheduleData = await scheduleResponse.json();
-        setError(scheduleData.error || 'مشکل در دریافت اطلاعات کلاس‌ها، شماره دانشجویی و رمز ورود خودتون رو برسی بکنید و یا بعد از چند دقیقه مجددا تلاش کنید');
+        setError(scheduleData.error || 'مشکل در دریافت اطلاعات کلاس‌ها');
         setIsLoading(false);
         return;
       }
 
-      const scheduleData = await scheduleResponse.json();
-
       localStorage.setItem('classesData', JSON.stringify(scheduleData));
-
       navigate('/schedule');
+
     } catch (err) {
-      setError('مشکل در برقراری ارتباط');
+      setError('مشکل در برقراری ارتباط با سرور');
     } finally {
       setIsLoading(false);
     }
@@ -86,7 +88,7 @@ export const Login = () => {
                 name="studentId"
                 type="text"
                 required
-                className="appearance-none rounded-md relative block w-full px-3 py-2 border border-input bg-background text-foreground focus:outline-none focus:ring-primary focus:border-ring sm:text-sm mt-2 text-right"
+                className="appearance-none rounded-md w-full px-3 py-2 border border-input bg-background text-foreground focus:outline-none focus:ring-primary focus:border-ring sm:text-sm mt-2 text-right"
                 value={formData.studentId}
                 onChange={(e) => setFormData({ ...formData, studentId: e.target.value })}
               />
@@ -99,9 +101,8 @@ export const Login = () => {
                 id="email"
                 name="email"
                 type="email"
-                autoComplete="email"
                 required
-                className="appearance-none rounded-md relative block w-full px-3 py-2 border border-input bg-background text-foreground focus:outline-none focus:ring-primary focus:border-ring sm:text-sm mt-2 text-right"
+                className="appearance-none rounded-md w-full px-3 py-2 border border-input bg-background text-foreground focus:outline-none focus:ring-primary focus:border-ring sm:text-sm mt-2 text-right"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               />
@@ -114,10 +115,9 @@ export const Login = () => {
                 id="password"
                 name="password"
                 type="password"
-                autoComplete="new-password"
                 required
-                placeholder='رمز ورود به پنل دانشجویی'
-                className="appearance-none rounded-md relative block w-full px-3 py-2 border border-input bg-background text-foreground placeholder:opacity-60 placeholder:text-sm placeholder-muted-foreground focus:outline-none focus:ring-primary focus:border-ring sm:text-sm mt-2 text-right"
+                placeholder="رمز ورود به پنل دانشجویی"
+                className="appearance-none rounded-md w-full px-3 py-2 border border-input bg-background text-foreground placeholder:opacity-60 placeholder:text-sm focus:outline-none focus:ring-primary focus:border-ring sm:text-sm mt-2 text-right"
                 value={formData.password}
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
               />
@@ -130,9 +130,8 @@ export const Login = () => {
                 id="confirmPassword"
                 name="confirmPassword"
                 type="password"
-                autoComplete="new-password"
                 required
-                className="appearance-none rounded-md relative block w-full px-3 py-2 border border-input bg-background text-foreground focus:outline-none focus:ring-primary focus:border-ring sm:text-sm mt-2 text-right"
+                className="appearance-none rounded-md w-full px-3 py-2 border border-input bg-background text-foreground focus:outline-none focus:ring-primary focus:border-ring sm:text-sm mt-2 text-right"
                 value={formData.confirmPassword}
                 onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
               />
@@ -148,8 +147,8 @@ export const Login = () => {
               {isLoading ? (
                 <>
                   <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-primary-foreground" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                   </svg>
                   <span>لطفا صبور باشید</span>
                 </>
@@ -158,6 +157,7 @@ export const Login = () => {
               )}
             </button>
           </div>
+
           {error && (
             <div className="text-destructive text-center text-sm">{error}</div>
           )}
