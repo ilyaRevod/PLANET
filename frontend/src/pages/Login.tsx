@@ -70,7 +70,7 @@ export const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background text-foreground py-12 px-4 sm:px-6 lg:px-8 font-vazir text-right">
+    <div className="min-h-[calc(100vh-42px)] flex items-center justify-center bg-background text-foreground py-12 px-4 sm:px-6 lg:px-8 font-vazir text-right transition-colors duration-300">
       <div className="max-w-md w-full space-y-8 p-8 rounded-lg">
         <div>
           <h2 className="mt-6 mb-9 text-center text-xl font-extrabold text-foreground">
@@ -88,7 +88,7 @@ export const Login = () => {
                 name="studentId"
                 type="text"
                 required
-                className="appearance-none rounded-md w-full px-3 py-2 border border-input bg-background text-foreground focus:outline-none focus:ring-primary focus:border-ring sm:text-sm mt-2 text-right"
+                className="appearance-none rounded-md w-full px-3 py-2 border border-input bg-background text-foreground focus:outline-none focus:ring-primary focus:border-ring sm:text-sm mt-2 text-right transition-colors duration-300"
                 value={formData.studentId}
                 onChange={(e) => setFormData({ ...formData, studentId: e.target.value })}
               />
@@ -102,7 +102,7 @@ export const Login = () => {
                 name="email"
                 type="email"
                 required
-                className="appearance-none rounded-md w-full px-3 py-2 border border-input bg-background text-foreground focus:outline-none focus:ring-primary focus:border-ring sm:text-sm mt-2 text-right"
+                className="appearance-none rounded-md w-full px-3 py-2 border border-input bg-background text-foreground focus:outline-none focus:ring-primary focus:border-ring sm:text-sm mt-2 text-right transition-colors duration-300"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               />
@@ -117,7 +117,7 @@ export const Login = () => {
                 type="password"
                 required
                 placeholder="رمز ورود به پنل دانشجویی"
-                className="appearance-none rounded-md w-full px-3 py-2 border border-input bg-background text-foreground placeholder:opacity-60 placeholder:text-sm focus:outline-none focus:ring-primary focus:border-ring sm:text-sm mt-2 text-right"
+                className="appearance-none rounded-md w-full px-3 py-2 border border-input bg-background text-foreground placeholder:opacity-60 placeholder:text-sm focus:outline-none focus:ring-primary focus:border-ring sm:text-sm mt-2 text-right transition-colors duration-300"
                 value={formData.password}
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
               />
@@ -131,7 +131,7 @@ export const Login = () => {
                 name="confirmPassword"
                 type="password"
                 required
-                className="appearance-none rounded-md w-full px-3 py-2 border border-input bg-background text-foreground focus:outline-none focus:ring-primary focus:border-ring sm:text-sm mt-2 text-right"
+                className="appearance-none rounded-md w-full px-3 py-2 border border-input bg-background text-foreground focus:outline-none focus:ring-primary focus:border-ring sm:text-sm mt-2 text-right transition-colors duration-300"
                 value={formData.confirmPassword}
                 onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
               />

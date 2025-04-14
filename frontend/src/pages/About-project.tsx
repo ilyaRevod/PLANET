@@ -1,10 +1,10 @@
 import React from 'react';
-import projectImage from '../public/images/PLANETw.png';
+import projectImage from '../public/images/PLANET(4).jpg';
 import { FaCheck } from 'react-icons/fa';
 
 const AboutProject: React.FC = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground pt-16 text-right font-vazir">
+    <div className="min-h-[calc(100vh-42px)] bg-background text-foreground pt-16 text-right font-vazir transition-colors duration-300">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           {/* Hero Section */}
@@ -14,7 +14,7 @@ const AboutProject: React.FC = () => {
                 <img
                   src={projectImage}
                   alt="تصویر پلنت"
-                  className="w-full h-auto rounded-2xl shadow-lg object-cover"
+                  className="w-full h-auto rounded-2xl shadow-lg object-cover transition-colors duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
               </div>
@@ -30,7 +30,7 @@ const AboutProject: React.FC = () => {
           </div>
 
           {/* Description Section */}
-          <div className="bg-card text-card-foreground rounded-2xl p-8 shadow-lg mb-6">
+          <div className="bg-card text-card-foreground rounded-2xl p-8 shadow-lg mb-6 transition-colors duration-300">
             <h2 className="text-base sm:text-lg md:text-xl font-bold text-card-foreground mb-2 sm:mb-6">
               درباره پلنت
             </h2>
@@ -64,8 +64,8 @@ const AboutProject: React.FC = () => {
 
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-card text-card-foreground rounded-2xl p-8 shadow-lg">
-              <div className="w-12 h-12 bg-secondary text-[#776BB2] rounded-full flex items-center justify-center mb-4">
+            <div className="bg-card text-card-foreground rounded-2xl p-8 shadow-lg transition-colors duration-300">
+              <div className="w-12 h-12 bg-secondary text-[#776BB2] rounded-full flex items-center justify-center mb-4 transition-colors duration-300">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -78,8 +78,8 @@ const AboutProject: React.FC = () => {
               </p>
             </div>
 
-            <div className="bg-card text-card-foreground rounded-2xl p-8 shadow-lg">
-              <div className="w-12 h-12 bg-secondary text-[#776BB2] rounded-full flex items-center justify-center mb-4">
+            <div className="bg-card text-card-foreground rounded-2xl p-8 shadow-lg transition-colors duration-300">
+              <div className="w-12 h-12 bg-secondary text-[#776BB2] rounded-full flex items-center justify-center mb-4 transition-colors duration-300">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
@@ -92,8 +92,8 @@ const AboutProject: React.FC = () => {
               </p>
             </div>
 
-            <div className="bg-card text-card-foreground rounded-2xl p-8 shadow-lg">
-              <div className="w-12 h-12 bg-secondary text-[#776BB2] rounded-full flex items-center justify-center mb-4">
+            <div className="bg-card text-card-foreground rounded-2xl p-8 shadow-lg transition-colors duration-300">
+              <div className="w-12 h-12 bg-secondary text-[#776BB2] rounded-full flex items-center justify-center mb-4 transition-colors duration-300">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                 </svg>

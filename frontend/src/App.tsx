@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
+import Footer from './components/Footer';
 import TimeTable from './components/TimeTable';
 import { Login } from './pages/Login';
 import Home from './pages/Home';
@@ -39,20 +40,25 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-background transition-colors duration-300">
+      <div className="min-h-screen flex flex-col bg-background text-foreground transition-colors duration-300">
         <Header
           isDarkMode={isDarkMode}
           toggleDarkMode={() => setIsDarkMode(!isDarkMode)}
         />
-        <WelcomePopup isOpen={showWelcomePopup} onClose={handleCloseWelcomePopup} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/about-project" element={<AboutProject />} />
-          <Route path="/about-me" element={<AboutMe />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/schedule" element={<TimeTable />} />
-        </Routes>
+        <div className="flex-1">
+          <WelcomePopup isOpen={showWelcomePopup} onClose={handleCloseWelcomePopup} />
+          <main className="h-full">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/about-project" element={<AboutProject />} />
+              <Route path="/about-me" element={<AboutMe />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/schedule" element={<TimeTable />} />
+            </Routes>
+          </main>
+        </div>
+        <Footer />
       </div>
     </Router>
   );

@@ -1,24 +1,24 @@
 import { Link } from 'react-router-dom';
-import projectImage from '../public/images/PLANETw.png';
+import projectImage from '../public/images/PLANET(4).jpg';
 import imageee from '../public/images/image.png';
-import bezoodi from '../public/images/بزودی(1).jpg';
+import bezoodi from '../public/images/بزودی(2).jpg';
 import ilyaa from '../public/images/ilyaaaa.jpg';
 
 const Home = () => {
   return (
-    <div className="container mx-auto px-4 py-8 text-right min-h-screen">
+    <div className="container mx-auto px-4 py-8 text-right min-h-[calc(100vh-42px)] transition-colors duration-300">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-14">
         {/* Left Column with Main Section and Small Sections */}
         <div className="lg:col-span-2 flex flex-col gap-6">
           {/* Large Left Section */}
           <Link to="/about-project" className="block">
-            <div className="relative overflow-hidden rounded-2xl group h-[50vh]">
+            <div className="relative overflow-hidden rounded-2xl group h-[50vh] transition-colors duration-300">
               <img
                 src={projectImage}
                 alt="Project Banner"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent">
                 <div className="absolute bottom-0 right-0 p-8 text-white">
                   <h2 className="text-xl font-vazir_bold mb-4">پلنت چیه؟</h2>
                   <p className="font-vazir text-sm opacity-90">

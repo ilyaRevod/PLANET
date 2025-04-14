@@ -24,9 +24,10 @@ export const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleDarkMode }) =>
   return (
     <header className={clsx(
       "fixed top-0 left-0 right-0 z-50",
-      "font-vazir"
+      "font-vazir",
+      "transition-colors duration-300"
     )}>
-      <div className="container mx-auto flex justify-between items-center p-4 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container mx-auto flex justify-between items-center p-4 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-colors duration-300">
         <h1 className="text-2xl font-bold text-foreground cursor-default">PLANET</h1>
 
         <nav className="hidden lg:flex items-center gap-6">

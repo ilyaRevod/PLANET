@@ -159,7 +159,7 @@ const TimeTable: React.FC = () => {
 
       <div className="w-full overflow-x-auto pt-1 pb-5 font-vazir">
         <div className="min-w-[1300px]">
-          <div className="grid grid-cols-[100px_repeat(6,1fr)] bg-background">
+          <div className="grid grid-cols-[100px_repeat(6,1fr)] bg-background transition-colors duration-300">
             {/* Header */}
             <div className="h-12 p-2"></div>
             {DAYS.map(day => (

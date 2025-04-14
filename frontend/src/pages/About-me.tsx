@@ -1,10 +1,10 @@
 import React from 'react';
 import { FaGithub, FaInstagram, FaTelegram } from 'react-icons/fa';
-// import mee from '../public/images/IMG_4582.JPG';
+import mee from '../public/images/mee.png';
 
 export const AboutMe = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground pt-16 text-right font-vazir">
+    <div className="min-h-[calc(100vh-42px)] bg-background text-foreground pt-16 text-right font-vazir transition-colors duration-300">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           {/* Hero Section */}
@@ -12,9 +12,9 @@ export const AboutMe = () => {
             <div className="w-full md:w-1/2">
               <div className="relative">
                 <img
-                  src="/src/public/images/IMG_4582.JPG"
+                  src={mee}
                   alt="Profile"
-                  className="w-full h-auto rounded-2xl shadow-lg object-cover aspect-square"
+                  className="w-full h-auto rounded-2xl shadow-lg object-cover aspect-square transition-colors duration-300"
                 />
                 <div className="absolute inset-0 rounded-2xl"></div>
               </div>
@@ -56,7 +56,7 @@ export const AboutMe = () => {
           </div>
 
           {/* About Section */}
-          <div className="bg-card text-card-foreground rounded-2xl p-4 shadow-lg mb-4">
+          <div className="bg-card text-card-foreground rounded-2xl p-4 shadow-lg mb-4 transition-colors duration-300">
             <h2 className="text-base sm:text-lg md:text-xl font-bold text-card-foreground mb-2 sm:mb-3">
               درباره من
             </h2>
@@ -69,39 +69,39 @@ export const AboutMe = () => {
 
           {/* Skills Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-card text-card-foreground rounded-2xl p-4 shadow-lg">
+            <div className="bg-card text-card-foreground rounded-2xl p-4 shadow-lg transition-colors duration-300">
               <h2 className="text-base sm:text-lg md:text-xl font-bold text-card-foreground mb-2 sm:mb-4">
                 مهارت‌های فنی
               </h2>
               <ul className="space-y-2 sm:space-y-4">
                 <li className="flex items-center justify-between">
                   <span className="text-sm sm:text-sm md:text-base text-muted-foreground">React & TypeScript</span>
-                  <div className="w-1/2 bg-muted rounded-full h-2">
+                  <div className="w-1/2 bg-muted rounded-full h-2 transition-colors duration-300">
                     <div className="bg-[#776BB2] h-2 rounded-full" style={{ width: '30%' }}></div>
                   </div>
                 </li>
                 <li className="flex items-center justify-between">
                   <span className="text-sm sm:text-sm md:text-base text-muted-foreground">Node.js & Express</span>
-                  <div className="w-1/2 bg-muted rounded-full h-2">
+                  <div className="w-1/2 bg-muted rounded-full h-2 transition-colors duration-300">
                     <div className="bg-[#776BB2] h-2 rounded-full" style={{ width: '75%' }}></div>
                   </div>
                 </li>
                 <li className="flex items-center justify-between">
                   <span className="text-sm sm:text-sm md:text-base text-muted-foreground">UI/UX Design</span>
-                  <div className="w-1/2 bg-muted rounded-full h-2">
+                  <div className="w-1/2 bg-muted rounded-full h-2 transition-colors duration-300">
                     <div className="bg-[#776BB2] h-2 rounded-full" style={{ width: '45%' }}></div>
                   </div>
                 </li>
                 <li className="flex items-center justify-between">
                   <span className="text-sm sm:text-sm md:text-base text-muted-foreground">Network</span>
-                  <div className="w-1/2 bg-muted rounded-full h-2">
+                  <div className="w-1/2 bg-muted rounded-full h-2 transition-colors duration-300">
                     <div className="bg-[#776BB2] h-2 rounded-full" style={{ width: '65%' }}></div>
                   </div>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-card text-card-foreground rounded-2xl p-4 shadow-lg">
+            <div className="bg-card text-card-foreground rounded-2xl p-4 shadow-lg transition-colors duration-300">
               <h2 className="text-base sm:text-lg md:text-xl font-bold text-card-foreground mb-2 sm:mb-4">
                 تحصیلات و گواهینامه‌ها
               </h2>
