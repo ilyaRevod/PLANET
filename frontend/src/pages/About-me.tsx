@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaInstagram, FaTelegram } from 'react-icons/fa';
-import mee from '../public/images/IMG_4582.JPG';
+// import mee from '../public/images/IMG_4582.JPG';
 
 export const AboutMe = () => {
   return (
@@ -12,7 +12,7 @@ export const AboutMe = () => {
             <div className="w-full md:w-1/2">
               <div className="relative">
                 <img
-                  src={mee}
+                  src="/src/public/images/IMG_4582.JPG"
                   alt="Profile"
                   className="w-full h-auto rounded-2xl shadow-lg object-cover aspect-square"
                 />
