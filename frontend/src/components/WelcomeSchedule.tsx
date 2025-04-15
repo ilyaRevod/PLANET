@@ -5,7 +5,7 @@ export const WelcomeSchedule: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background text-foreground py-12 px-4 sm:px-6 lg:px-8 font-vazir">
+    <div className="min-h-[calc(100vh-42px)] flex items-center justify-center bg-background text-foreground py-12 px-4 sm:px-6 lg:px-8 font-vazir transition-colors duration-300">
       <div className="max-w-md w-full space-y-5 p-8 rounded-lg text-center">
         <h2 className="mt-6 text-xl font-extrabold text-foreground">
           به برنامه هفتگی خوش آمدید

@@ -1,18 +1,15 @@
 const express = require('express');
-const fs = require('fs');
-const morgan = require('morgan');
-const path = require('path');
 const cors = require('cors');
-// const jwt = require('jsonwebtoken');
-// const bcrypt = require('bcryptjs');
 const bodyParser = require('body-parser');
+// const fs = require('fs');
+// const morgan = require('morgan');
+// const path = require('path');
 
 // Routes
 const authLogin = require('./routes/API-auth-login');
 const getClasses = require('./routes/API-get-classes');
 
 const app = express();
-// const port = 3000;
 const port = process.env.PORT || 3000;
 
 /*
@@ -20,13 +17,9 @@ var accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs', 'access.
 app.use(morgan('combined', { stream: accessLogStream }));
 */
 
-// parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
-
-// parse application/json
 app.use(bodyParser.json());
 
-// app.use(cors());
 app.use(cors({
   origin: 'https://planet-frontend-t4t1.onrender.com',
   credentials: true
@@ -34,7 +27,7 @@ app.use(cors({
 
 
 app.get('/', function (req, res) {
-  res.send("Hello! This is PLANET API's");
+  res.send("Hello! This is PLANET");
 });
 
 // Login
