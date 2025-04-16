@@ -48,7 +48,7 @@ export const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleDarkMode }) =>
         <div className="flex items-center gap-4">
           <button
             onClick={toggleDarkMode}
-            className="p-2 rounded-full hover:bg-muted"
+            className="p-2 rounded-full"
           >
             {isDarkMode ? <Sun className="text-foreground" /> : <Moon className="text-foreground" />}
           </button>
@@ -70,7 +70,7 @@ export const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleDarkMode }) =>
       )}>
         <button
           onClick={() => setIsMenuOpen(false)}
-          className="absolute top-4 right-4"
+          className="absolute top-6 right-6"
         >
           <X className="h-6 w-6 text-foreground" />
         </button>
@@ -81,7 +81,7 @@ export const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleDarkMode }) =>
               <li key={item.path} className='border-b border-border pb-2'>
                 <Link
                   to={item.path}
-                  className="text-xl text-foreground"
+                  className="text-lg text-foreground"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
