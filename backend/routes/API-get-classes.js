@@ -154,8 +154,12 @@ router.get('/', async (req, res) => {
 
             const rawTime = $data(cols[6 + offset]).text().trim();
             const [startTime, endTime] = rawTime.split('-').map(s => s.trim());
+            // const location = $data(cols[5 + offset]).text().trim();
+            // const room = location.includes('كلاس') ? location.split('كلاس')[1].trim() : location;
+
             const location = $data(cols[5 + offset]).text().trim();
-            const room = location.includes('كلاس') ? location.split('كلاس')[1].trim() : location;
+            const match = location.match(/كلاس\s*(.+)$/);
+            const room = match ? match[1].trim() : location;
 
             lessons.push({
                 id: `class-${i + 1}`,
