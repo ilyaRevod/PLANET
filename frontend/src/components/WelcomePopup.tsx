@@ -24,18 +24,20 @@ export const WelcomePopup: React.FC<WelcomePopupProps> = ({ isOpen, onClose }) =
         </h2>
 
         <div className="space-y-2 text-muted-foreground text-center">
-          <p className='text-sm sm:text-sm md:text-sm'>قبل از ورود باید به چندتا نکته
+          <p className='text-sm sm:text-sm md:text-sm'>این نسخه از پلنت، نسخه آزمایشی
+            <span className='text-destructive'>  (بتا)  </span>
+            می باشد</p>
+{/*           <p className='text-sm sm:text-sm md:text-sm'>قبل از ورود باید به چندتا نکته
             <span className='text-destructive'> توجه </span>
-            کنی</p>
-          <ul className="text-sm sm:text-sm md:text-sm list-inside space-y-2 text-right">
-{/*             <li>قبل از انجام انتخاب واحد از صحت آنها در وبسایت اطمینان حاصل کنید، لذا پلنت هیچ مسئولیتی در قبال ناهماهنگی کلاس ها قبول نمیکند</li> */}
-{/*             <li>به تعداد واحد های انتخابی خودتون توجه داشته باشید</li> */}
-            <li>این نسخه از پلنت، نسخه آزمایشی (بتا) می‌باشد.</li>
-{/*             <li>پس از اتمام انتخاب واحد، با کلیک روی گزینه
+            کنی</p> */}
+{/*           <ul className="text-sm sm:text-sm md:text-sm list-inside space-y-2 text-right">
+            <li>قبل از انجام انتخاب واحد از صحت آنها در وبسایت اطمینان حاصل کنید، لذا پلنت هیچ مسئولیتی در قبال ناهماهنگی کلاس ها قبول نمیکند</li>
+            <li>به تعداد واحد های انتخابی خودتون توجه داشته باشید</li>
+            <li>پس از اتمام انتخاب واحد، با کلیک روی گزینه
               <span className='text-[#776BB2]'> دانلود </span>
-              میتونید خلاصه ای از واحد های انتخابی تون رو داشته باشید</li> */}
-{/*             <li>" استفاده از این پلتفرم کاملا رایگان میباشد "</li> */}
-          </ul>
+              میتونید خلاصه ای از واحد های انتخابی تون رو داشته باشید</li>
+            <li>" استفاده از این پلتفرم کاملا رایگان میباشد "</li>
+          </ul> */}
         </div>
 
         <button
