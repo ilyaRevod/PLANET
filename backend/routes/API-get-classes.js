@@ -114,7 +114,7 @@ router.get('/', async (req, res) => {
             __VIEWSTATE: scheduleViewState,
             __VIEWSTATEGENERATOR: scheduleViewStateGenerator,
             __EVENTVALIDATION: scheduleEventValidation,
-            'ctl00$CPH2$drpTerm': '14042',
+            'ctl00$CPH2$drpTerm': '14041',
             'ctl00$CPH2$btnView': 'مشاهده'
         });
 
